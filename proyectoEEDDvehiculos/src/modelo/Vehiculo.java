@@ -1,6 +1,18 @@
 package modelo;
 
+/**
+ * 
+ * @author grupo La clase Vehiculo es la clase padre de la que heredan el resto.
+ *         Tiene su método CalculaITV el cual pueden implementar las clases
+ *         hijas.
+ *
+ */
 public class Vehiculo {
+
+	/*
+	 * Atributos de la clase Vehiculo. LLevan protected para que las clases hijas
+	 * puedan acceder también
+	 */
 	protected String marca;
 	protected String modelo;
 	protected String color;
@@ -9,6 +21,7 @@ public class Vehiculo {
 		DIESEL, GASOLINA, ELECTRICO, HIBRIDO
 	}
 
+	protected tipoComb combus;
 	protected short cilindrada;
 	protected byte plazas;
 
@@ -16,12 +29,27 @@ public class Vehiculo {
 		A, B, C, ECO, ZERO
 	}
 
+	protected ambiental ambien;
+
+	// Constructor por defecto
 	public Vehiculo() {
 		marca = "";
 		modelo = "";
 		color = "";
 		cilindrada = 0;
 		plazas = 0;
+	}
+
+	// Constructor con parámetros
+	public Vehiculo(String marca, String modelo, String color, tipoComb combus, short cilindrada, byte plazas,
+			ambiental ambien) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.color = color;
+		this.combus = combus;
+		this.cilindrada = cilindrada;
+		this.plazas = plazas;
+		this.ambien = ambien;
 	}
 
 	public String getMarca() {
