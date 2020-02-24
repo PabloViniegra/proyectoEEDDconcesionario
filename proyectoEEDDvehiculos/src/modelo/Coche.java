@@ -16,7 +16,7 @@ public class Coche extends Vehiculo {
 
 public Coche() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 
@@ -25,7 +25,7 @@ public Coche() {
 	public Coche( byte numpuertas, boolean descaportable,String marca, String modelo, String color, tipoComb combus, short cilindrada, byte plazas,
 			ambiental ambien) {
 		super(marca, modelo, color, combus, cilindrada, plazas, ambien);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 

@@ -10,7 +10,7 @@ private boolean rutina;
 
 public Autobus() {
 	super();
-	// TODO Auto-generated constructor stub
+	
 }
 
 
@@ -19,7 +19,7 @@ public Autobus() {
 public Autobus(boolean acceso, boolean articulacion, boolean rutina, String marca, String modelo, String color, tipoComb combus, short cilindrada, byte plazas,
 		ambiental ambien) {
 	super(marca, modelo, color, combus, cilindrada, plazas, ambien);
-	// TODO Auto-generated constructor stub
+	
 }
 
 
