@@ -1,6 +1,6 @@
 package controlador;
 
-
+import vista.Formulario;
 
 public class Main {
 

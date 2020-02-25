@@ -21,7 +21,7 @@ public class Vehiculo {
 	protected byte plazas;
 	protected enumAmbiental ambiental;
 
-<<<<<<< HEAD
+
 	protected enum ambiental {
 		A, B, C, ECO, ZERO
 	}
@@ -31,9 +31,7 @@ public class Vehiculo {
 	/**Constructor por defecto de la clase padre Vehiculo
 	 * 
 	 */
-=======
 
->>>>>>> c655e8e453dcf93920008b4eeac9427a8d0777ef
 	// Constructor por defecto
 	public Vehiculo() {
 		marca = "";

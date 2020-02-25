@@ -6,41 +6,12 @@ package modelo;
  *
  */
 public class Moto extends Vehiculo {
-<<<<<<< HEAD
-	protected enum tipoMoto {
-		CUSTOM, DEPORTIVA, QUAD
-	}
+
+	
 
 	private byte numRuedas;
-=======
- protected enumTipoMoto tipoMoto;
- private byte numRuedas;
-
- 
- public Moto() {
-	super();
+	protected enumTipoMoto tipoMoto;
 	
-}
-public Moto(byte numRuedas,String marca, String modelo, String color, enumTipoComb tipoComb, short cilindrada, byte plazas,
-		enumAmbiental ambiental) {
-	super(marca, modelo, color, tipoComb, cilindrada, plazas, ambiental);
-	
-}
-public byte getNumRuedas() {
-	return numRuedas;
-}
-public void setNumRuedas(byte numRuedas) {
-	this.numRuedas = numRuedas;
-}
- 
- 
- 
- 
- 
- 
- 
-}
->>>>>>> c655e8e453dcf93920008b4eeac9427a8d0777ef
 
 	/**Constructor por defecto de la clase hija moto
 	 * 
@@ -48,7 +19,7 @@ public void setNumRuedas(byte numRuedas) {
 	 */
 	public Moto() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/**Constructor por parámetros de la clase hija moto
@@ -62,8 +33,8 @@ public void setNumRuedas(byte numRuedas) {
 	 * @param plazas
 	 * @param ambien
 	 */
-	public Moto(byte numRuedas, String marca, String modelo, String color, tipoComb combus, short cilindrada,
-			byte plazas, ambiental ambien) {
+	public Moto(byte numRuedas, String marca, String modelo, String color, enumTipoComb combus, short cilindrada,
+			byte plazas, enumAmbiental ambien) {
 		super(marca, modelo, color, combus, cilindrada, plazas, ambien);
 		// TODO Auto-generated constructor stub
 	}
