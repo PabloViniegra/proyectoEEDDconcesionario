@@ -16,9 +16,9 @@ public Autobus() {
 
 
 
-public Autobus(boolean acceso, boolean articulacion, boolean rutina, String marca, String modelo, String color, tipoComb combus, short cilindrada, byte plazas,
-		ambiental ambien) {
-	super(marca, modelo, color, combus, cilindrada, plazas, ambien);
+public Autobus(boolean acceso, boolean articulacion, boolean rutina, String marca, String modelo, String color, enumTipoComb tipoComb, short cilindrada, byte plazas,
+		enumAmbiental ambiental) {
+	super(marca, modelo, color, tipoComb, cilindrada, plazas, ambiental);
 	
 }
 
