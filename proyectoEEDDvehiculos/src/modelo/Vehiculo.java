@@ -16,15 +16,12 @@ public class Vehiculo {
 	protected String marca;
 	protected String modelo;
 	protected String color;
-
-	protected enum tipoComb {
-		DIESEL, GASOLINA, ELECTRICO, HIBRIDO
-	}
-
-	protected tipoComb combus;
+	protected enumTipoComb tipoComb;
 	protected short cilindrada;
 	protected byte plazas;
+	protected enumAmbiental ambiental;
 
+<<<<<<< HEAD
 	protected enum ambiental {
 		A, B, C, ECO, ZERO
 	}
@@ -34,6 +31,9 @@ public class Vehiculo {
 	/**Constructor por defecto de la clase padre Vehiculo
 	 * 
 	 */
+=======
+
+>>>>>>> c655e8e453dcf93920008b4eeac9427a8d0777ef
 	// Constructor por defecto
 	public Vehiculo() {
 		marca = "";
@@ -54,15 +54,15 @@ public class Vehiculo {
 	 */
 
 	// Constructor con parámetros
-	public Vehiculo(String marca, String modelo, String color, tipoComb combus, short cilindrada, byte plazas,
-			ambiental ambien) {
+	public Vehiculo(String marca, String modelo, String color, enumTipoComb tipoComb, short cilindrada, byte plazas,
+			enumAmbiental ambiental) {
 		this.marca = marca;
 		this.modelo = modelo;
 		this.color = color;
-		this.combus = combus;
+		this.tipoComb = tipoComb;
 		this.cilindrada = cilindrada;
 		this.plazas = plazas;
-		this.ambien = ambien;
+		this.ambiental = ambiental;
 	}
 	/**Get del atributo marca
 	 * 

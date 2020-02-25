@@ -21,9 +21,10 @@ public class Coche extends Vehiculo {
 
 	public Coche() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Constructor por parámetros de la clase hija Coche
 	 * 
@@ -42,6 +43,15 @@ public class Coche extends Vehiculo {
 			short cilindrada, byte plazas, ambiental ambien) {
 		super(marca, modelo, color, combus, cilindrada, plazas, ambien);
 		// TODO Auto-generated constructor stub
+=======
+
+
+
+	public Coche( byte numpuertas, boolean descaportable,String marca, String modelo, String color, enumTipoComb tipoComb, short cilindrada, byte plazas,
+			enumAmbiental ambiental) {
+		super(marca, modelo, color, tipoComb, cilindrada, plazas, ambiental);
+		
+>>>>>>> c655e8e453dcf93920008b4eeac9427a8d0777ef
 	}
 
 	/**
