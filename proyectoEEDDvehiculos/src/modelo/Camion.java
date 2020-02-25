@@ -8,7 +8,9 @@ private int taramax;
 private int galibo;
 
 
-
+/**
+ * La clase camión crea objetos de tipo camión con atributos propios más los de la clase padre Vehículo.
+ */
 public Camion() {
 	super();
 	
