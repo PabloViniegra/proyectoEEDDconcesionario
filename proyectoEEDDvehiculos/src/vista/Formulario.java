@@ -78,13 +78,12 @@ public class Formulario {
 			}
 
 		}
-		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		int diaActual=0;
 		Calendar calendario = new GregorianCalendar();
 		if (calendario.get(Calendar.DAY_OF_MONTH) > dia) {
-			int diaActual = 30-calendario.get(Calendar.DAY_OF_MONTH);
+			 diaActual = 30-calendario.get(Calendar.DAY_OF_MONTH);
 		} else {
-			int diaActual = dia - calendario.get(Calendar.DAY_OF_MONTH);
+			 diaActual = dia - calendario.get(Calendar.DAY_OF_MONTH);
 		}
 		
 		int mesActual = mes - calendario.get(Calendar.MONTH);
