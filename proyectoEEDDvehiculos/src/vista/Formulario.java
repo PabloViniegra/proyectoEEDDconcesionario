@@ -35,16 +35,16 @@ public class Formulario {
 				dia = sc.nextInt();
 				validacionDia = true;
 			} catch (InputMismatchException e) {
-				System.out.println("Introduce un número: ");
+				System.out.print("Introduce un número: ");
 			} catch (NoSuchElementException e) {
 				System.out.println(e.getMessage());
 				
 			} finally {
-				sc.next();
+				sc.nextLine();
 			}
 		}
 		int mes = 0;
-		System.out.println("Introduce el mes: ");
+		System.out.print("Introduce el mes: ");
 		boolean validacionMes = false;
 
 		while (!validacionMes) {
@@ -52,14 +52,14 @@ public class Formulario {
 				mes = sc.nextInt();
 				validacionMes = true;
 			} catch (InputMismatchException a) {
-				System.out.println("Introduce un número:");
+				System.out.print("Introduce un número:");
 
 			} finally {
 				sc.nextLine();
 			}
 		}
 		int anio = 0;
-		System.out.println("Introduce el año: ");
+		System.out.print("Introduce el año: ");
 		boolean validacionAnio = false;
 
 		while (!validacionAnio) {
@@ -67,7 +67,7 @@ public class Formulario {
 				anio = sc.nextInt();
 				validacionAnio = true;
 			} catch (InputMismatchException b) {
-				System.out.println("Introduce un número:");
+				System.out.print("Introduce un número:");
 			} finally {
 				sc.nextLine();
 			}
@@ -82,7 +82,7 @@ public class Formulario {
 
 		int resultado = (diaActual + (mesActual) + (anioActual * 365));
 		System.out.println("Te quedan " + resultado + " días para pasar la ITV.");
-		sc.close();
+		
 	}
 	/**
 	 * Calcula los kilómetros totales que se han hecho en los días indicados por el usuario. Devuelve un integer.
@@ -105,7 +105,7 @@ public class Formulario {
 			km = sc.nextInt();
 			resultado += km;
 		}
-		sc.close();
+		
 		return resultado;
 	}
 	/**
@@ -130,7 +130,7 @@ public class Formulario {
 		} else {
 			System.out.println("Dato inválido");
 		}
-		sc.close();
+		
 		return permiso;
 
 	}
@@ -182,7 +182,7 @@ public class Formulario {
 		} else {
 			System.out.println("No te he entendido");
 		}
-		sc.close();
+		
 		return def;
 	}
 	/**
@@ -196,7 +196,7 @@ public class Formulario {
 		Autobus miAutobus = new Autobus();
 		Camion miCamion = new Camion();
 
-		byte numusuario = 0;
+		
 		do {
 			System.out.println("_________MENU_________");
 			System.out.println("1. ¿Cuánto me queda para la ITV?");
@@ -206,20 +206,8 @@ public class Formulario {
 			System.out.println("5. Velocidad de mi camión");
 			System.out.println("6. Salir");
 			System.out.print("Introduce la opción: ");
-			boolean check = false;
-			while (!check) {
-				try {
-					numusuario = sc.nextByte();
-					check = true;
-				} catch (InputMismatchException e) {
-					System.out.println("Por favor, ingrese un número.");
-
-				} finally {
-					sc.nextLine();
-				}
-			}
-			sc.close();
-			switch (numusuario) {
+			
+			switch (sc.nextInt()) {
 			case 1:
 				f.calculaITV();
 				break;
@@ -245,8 +233,9 @@ public class Formulario {
 			default:
 				System.out.println("Opción inválida. Vuelve a probar.");
 			}
-
-		} while (numusuario != 6);
-	}
+			
+		} while (sc.nextInt() != 6);
+		sc.close();
+	}	
 
 }
