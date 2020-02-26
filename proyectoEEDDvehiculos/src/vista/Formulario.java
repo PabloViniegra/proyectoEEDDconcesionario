@@ -1,10 +1,15 @@
 package vista;
 
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
+
+import javax.swing.text.DateFormatter;
 
 import modelo.Autobus;
 import modelo.Camion;
@@ -74,9 +79,14 @@ public class Formulario {
 
 		}
 		
-
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Calendar calendario = new GregorianCalendar();
-		int diaActual = dia - calendario.get(Calendar.DAY_OF_MONTH);
+		if (calendario.get(Calendar.DAY_OF_MONTH) > dia) {
+			int diaActual = 30-calendario.get(Calendar.DAY_OF_MONTH);
+		} else {
+			int diaActual = dia - calendario.get(Calendar.DAY_OF_MONTH);
+		}
+		
 		int mesActual = mes - calendario.get(Calendar.MONTH);
 		int anioActual = anio - calendario.get(Calendar.YEAR);
 
@@ -125,7 +135,7 @@ public class Formulario {
 			permiso = "Necesitarías el carnet A2 o AM";
 		} else if (m.getCilindrada() == 125) {
 			permiso = "Necesitarías el carnet B o A1";
-		} else if (m.getCilindrada() > 125 && m.getCilindrada() < 500) {
+		} else if (m.getCilindrada() > 125 && m.getCilindrada() <= 500) {
 			permiso = "Necesitarías un carnet A";
 		} else {
 			System.out.println("Dato inválido");
@@ -196,18 +206,18 @@ public class Formulario {
 		Autobus miAutobus = new Autobus();
 		Camion miCamion = new Camion();
 
-		
+		int opcion;
 		do {
 			System.out.println("_________MENU_________");
 			System.out.println("1. ¿Cuánto me queda para la ITV?");
 			System.out.println("2. Calculador de kilómetros de mi coche");
-			System.out.println("3. ¿Qué permiso de mot necesito?");
+			System.out.println("3. ¿Qué permiso de moto necesito?");
 			System.out.println("4. La ruta de mi autobús");
 			System.out.println("5. Velocidad de mi camión");
 			System.out.println("6. Salir");
 			System.out.print("Introduce la opción: ");
-			
-			switch (sc.nextInt()) {
+			opcion=sc.nextInt();
+			switch (opcion) {
 			case 1:
 				f.calculaITV();
 				break;
@@ -234,7 +244,7 @@ public class Formulario {
 				System.out.println("Opción inválida. Vuelve a probar.");
 			}
 			
-		} while (sc.nextInt() != 6);
+		} while (opcion != 6);
 		sc.close();
 	}	
 
